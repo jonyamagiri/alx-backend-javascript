@@ -47,17 +47,9 @@
 
 #### Task: 12-createReportObject.js
 
-#### Task: 
+#### Task: 100-createIteratorObject.js
 
-#### Task: 
-
-#### Task: 
-
-#### Task: 
-
-#### Task: 
-
-
+#### Task: 101-iterateThroughObject.js
 
 
 ___
