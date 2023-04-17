@@ -23,7 +23,29 @@
 
 #### Task: 0-constants.js
 
-#### Task: 
+#### Task: 1-block-scoped.js
+
+#### Task: 2-arrow.js
+
+#### Task: 3-default-parameter.js
+
+#### Task: 4-rest-parameter.js
+
+#### Task: 5-spread-operator.js
+
+#### Task: 6-string-interpolation.js
+
+#### Task: 7-getBudgetObject.js
+
+#### Task: 8-getBudgetCurrentYear.js
+
+#### Task: 9-getFullBudget.js
+
+#### Task: 10-loops.js
+
+#### Task: 11-createEmployeesObject.js
+
+#### Task: 12-createReportObject.js
 
 #### Task: 
 
