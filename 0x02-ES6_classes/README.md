@@ -13,7 +13,7 @@
 	* Metaprogramming and symbols
 
 
-* n ECMAScript 6 (ES6), you can define a class using the class keyword, which provides a more convenient and object-oriented way of creating reusable code in JavaScript. 
+* In ECMAScript 6 (ES6), you can define a class using the class keyword, which provides a more convenient and object-oriented way of creating reusable code in JavaScript. 
 * Metaprogramming is a technique in programming where a program can manipulate or modify its own structure, behavior, or code at runtime. In JavaScript, metaprogramming can be achieved using several features, including Symbols.
 
 
