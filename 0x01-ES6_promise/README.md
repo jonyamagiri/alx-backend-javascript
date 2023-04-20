@@ -40,13 +40,7 @@
 
 - [x] Task: 9-try.js
 
-- [x] Task: 
-
-- [x] Task: 
-
-- [x] Task: 
-
-
+- [x] Task: 100-await.js
 
 ___
 
