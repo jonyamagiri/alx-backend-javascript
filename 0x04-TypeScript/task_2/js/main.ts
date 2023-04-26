@@ -56,3 +56,19 @@ export const executeWork = (employee: DirectorInterface | TeacherInterface): str
   console.log(tasks);
   return tasks;
 };
+
+/* a String literal type named Subjects allowing a variable to have the value 
+Math or History only */
+
+type Subjects = 'Math' | 'History';
+
+const teachClass = (todayClass: Subjects): string => {
+  switch (todayClass) {
+    case 'Math':
+      return 'Teaching Math';
+    case 'History':
+      return 'Teaching History';
+    default:
+      throw new Error('Invalid subject');
+  }
+};
