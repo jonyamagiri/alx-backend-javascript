@@ -1,0 +1,47 @@
+// DirectorInterface interface with 3 expected methods
+interface DirectorInterface {
+  workFromHome(): string;
+  getCoffeeBreak(): string;
+  workDirectorTasks(): string;
+}
+
+// TeacherInterface interface with 3 expected methods
+interface TeacherInterface {
+  workFromHome(): string;
+  getCoffeeBreak(): string;
+  workTeacherTasks(): string;
+}
+
+// Create a class Director that will implement DirectorInterface
+export class Director implements DirectorInterface {
+  workFromHome = (): string => {
+    const message = "Working from home";
+    console.log(message);
+    return message;
+  };
+
+  getCoffeeBreak = (): string => {
+    const message = "Getting a coffee break";
+    console.log(message);
+    return message;
+  };
+
+  workDirectorTasks = (): string => {
+    const message = "Getting to director tasks";
+    console.log(message);
+    return message;
+  };
+}
+
+// Create a class Teacher that will implement TeacherInterface
+export class Teacher implements TeacherInterface {
+  workFromHome = () : string => 'Cannot work from home';
+  getCoffeeBreak = () : string => 'Cannot have a break';
+  workTeacherTasks = () : string => 'Getting to work';
+}
+
+// Create a function createEmployee with the required specifications
+
+export function createEmployee(salary: number | string): Teacher | Director {
+  return typeof salary === "number" && salary < 500 ? new Teacher() : new Director();
+}
