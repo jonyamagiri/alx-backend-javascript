@@ -45,3 +45,14 @@ export class Teacher implements TeacherInterface {
 export function createEmployee(salary: number | string): Teacher | Director {
   return typeof salary === "number" && salary < 500 ? new Teacher() : new Director();
 }
+
+// Creating functions specific to employees
+export const isDirector = (employee: DirectorInterface | TeacherInterface): employee is Director => {
+  return (employee as Director).workDirectorTasks !== undefined;
+};
+
+export const executeWork = (employee: DirectorInterface | TeacherInterface): string => {
+  const tasks = isDirector(employee) ? employee.workDirectorTasks() : employee.workTeacherTasks();
+  console.log(tasks);
+  return tasks;
+};
