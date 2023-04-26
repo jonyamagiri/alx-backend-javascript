@@ -7,3 +7,8 @@ interface Teacher {
     yearsOfExperience?: number;
     [propName: string]: any;
 }
+
+// interface named Directors that extends Teacher
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
