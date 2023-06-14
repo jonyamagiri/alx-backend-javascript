@@ -50,15 +50,23 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
 });
 
 // defines route handlers
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.send('Hello Holberton School!');
 });
 
-app.get('/students', async (_req, res) => {
-  const report = await countStudents(dbFile);
-  const responseInfo = ['This is the list of our students', report];
-  res.setHeader('Content-Type', 'text/plain');
-  res.send(responseInfo.join('\n'));
+app.get('/students', (_req, res) => {
+  countStudents(dbFile)
+    .then((report) => {
+      const responseInfo = ['This is the list of our students', report];
+      res.setHeader('Content-Type', 'text/plain');
+      res.send(responseInfo.join('\n'));
+    })
+    .catch((err) => {
+      const errorMessage = err instanceof Error ? err.message : err.toString();
+      const responseInfo = ['This is the list of our students', errorMessage];
+      res.setHeader('Content-Type', 'text/plain');
+      res.send(responseInfo.join('\n'));
+    });
 });
 
 app.listen(port, () => {
