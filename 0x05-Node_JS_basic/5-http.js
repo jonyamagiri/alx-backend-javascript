@@ -7,6 +7,7 @@ const app = http.createServer();
 
 const dbFile = process.argv[2] || '';
 
+// reads and processes the CSV file to generate the student report
 const countStudents = (dataPath) => new Promise((resolve, reject) => {
   if (dataPath === undefined || dataPath === null) {
     reject(new Error('Cannot load the database'));
@@ -50,11 +51,13 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
   });
 });
 
-function sendResponse(res, responseText) {
+// sets the response headers and sends the response text
+const sendResponse = (res, responseText) => {
   res.setHeader('Content-Type', 'text/plain');
   res.end(responseText);
-}
+};
 
+// event handler, checks the requested URL path and sends appropriate response
 app.on('request', (req, res) => {
   if (req.url === '/') {
     const responseText = 'Hello Holberton School!';
@@ -76,6 +79,7 @@ app.on('request', (req, res) => {
   }
 });
 
+// starts server with the specified port and hostname
 app.listen(port, hostname, () => {
   console.log(`Server listening at http://${hostname}:${port}`);
 });
